@@ -3,44 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Webpage</title>
+    <title>Happy Birthday!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
             text-align: center;
+            color: white;
         }
         header {
-            background: #333;
-            color: white;
-            padding: 15px 0;
-            font-size: 24px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            font-size: 28px;
         }
         .container {
+            margin: 50px auto;
             padding: 20px;
         }
-        footer {
-            background: #333;
-            color: white;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .cake {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+        }
+        .balloons {
+            position: absolute;
             width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { transform: translateY(-800px); opacity: 0; }
         }
     </style>
 </head>
 <body>
     <header>
-        My Responsive Webpage
+        Wishing You a Lovely Happy Birthday! 🎉🎂
     </header>
     <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple responsive webpage using HTML and CSS.</p>
+        <h1>Happy Birthday!</h1>
+        <p>May your day be filled with joy, laughter, and lots of love. Have a fantastic birthday!</p>
+        <img src="https://cdn.pixabay.com/photo/2017/05/30/00/52/cake-2358333_1280.png" alt="Birthday Cake" class="cake">
+    </div>
+    <div class="balloons">
+        <img src="https://cdn.pixabay.com/photo/2014/04/02/14/10/balloons-304422_1280.png" alt="Balloon" class="balloon" style="left: 10%; animation-duration: 4s;">
+        <img src="https://cdn.pixabay.com/photo/2014/04/02/14/10/balloons-304422_1280.png" alt="Balloon" class="balloon" style="left: 40%; animation-duration: 6s;">
+        <img src="https://cdn.pixabay.com/photo/2014/04/02/14/10/balloons-304422_1280.png" alt="Balloon" class="balloon" style="left: 70%; animation-duration: 5s;">
     </div>
     <footer>
-        &copy; 2025 My Website
+        &copy; 2025 Birthday Wishes
     </footer>
 </body>
 </html>
